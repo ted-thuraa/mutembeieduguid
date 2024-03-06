@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AdminDashController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AdminUserController;
@@ -57,5 +58,6 @@ Route::middleware(['auth:sanctum', 'isAdmin'])->group(function () {
     Route::post('/admin/newresource', [ResourceController::class, 'store']);
     Route::post('/admin/updateresource/{id}', [ResourceController::class, 'update']);
     Route::delete('/admin/resource/{id}', [ResourceController::class, 'destroy']);
-    
+    Route::get('/admin/analytics', [AdminDashController::class, 'index']);
+
 });

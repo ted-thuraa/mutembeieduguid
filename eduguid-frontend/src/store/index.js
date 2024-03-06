@@ -153,6 +153,28 @@ const store = createStore({
         },
 
         //Admin
+        async getUsers({ commit }) {
+            return axiosClient.get("/admin/users").then(({ data }) => {
+                commit("setUserLoading", true);
+                commit("setUsers", data.data);
+                //commit("setIsAdmin", data.user.isAdmin);
+                //commit("setToken", data.token);
+                console.log(data.data);
+
+                return data;
+            });
+        },
+        async getAnalytics({ commit }) {
+            return axiosClient.get("/admin/analytics").then(({ data }) => {
+                //commit("setUserLoading", true);
+                commit("setAnalytics", data);
+                //commit("setIsAdmin", data.user.isAdmin);
+                //commit("setToken", data.token);
+                console.log(data.data);
+
+                return data;
+            });
+        },
         async getResources({ commit }) {
             await axiosClient.get("/admin/getresource").then(({ data }) => {
                 //commit("setUserLoading", true);
@@ -279,13 +301,14 @@ const store = createStore({
             console.log(data);
             state.resources.data = data;
         },
-
-        // setUsersLoading: (state, loading) => {
-        //   state.users.loading = loading;
-        // },
-        // setUsers: (state, data) => {
-        //   state.users.data = data;
-        // },
+        setAnalytics: (state, data) => {
+            console.log(data);
+            state.analytics.data = data;
+        },
+        setUsers: (state, data) => {
+            console.log(data);
+            state.users.data = data;
+        },
     },
     persist: true,
     modules: {},

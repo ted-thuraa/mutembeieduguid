@@ -415,7 +415,7 @@
         </div>
         <footer class="md:pt-10">
             <p class="text-center text-xs font-medium text-gray-500">
-                © 2023 Creatorpa.ge - All Rights Reserved
+                © 2023 Eduguid - All Rights Reserved
             </p>
         </footer>
     </div>

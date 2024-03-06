@@ -73,18 +73,12 @@ class AuthController extends Controller
         ]);
 
         try {
-            $mailCode = sha1(time());
-            $data = [
-                //'name' => $request->name,
-                'emailverification_code' => $mailCode,
-                
-            ];
+            
             $user = User::create([
                 //'name' => $request->name,
                 'email' => $request->email,
-                //'image' => 'creatorpageassets/user-placeholder.png',
                 'password' => Hash::make($request->password),
-                'emailverification_code' => $mailCode,
+                
             ]);
     
             if ($user != null) {

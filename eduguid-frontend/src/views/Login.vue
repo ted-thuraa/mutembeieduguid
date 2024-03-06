@@ -45,10 +45,10 @@
                             class="-m-1.5 p-1.5 flex items-center justify-center"
                         >
                             <v-lazy-image :src="Logo" class="h-8 w-auto" />
-                            <span class="sr-only">Creator page</span>
+                            <span class="sr-only">EDUGUID</span>
 
                             <span class="-m-1.5 p-2.5 text-black font-semibold"
-                                >Creator page</span
+                                >EDUGUID</span
                             >
                         </a>
                         <button
