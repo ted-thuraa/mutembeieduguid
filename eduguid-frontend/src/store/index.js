@@ -38,6 +38,10 @@ const store = createStore({
             loading: false,
             data: [],
         },
+        analytics: {
+            loading: false,
+            data: [],
+        },
 
         //loading and toasts
         notification: {

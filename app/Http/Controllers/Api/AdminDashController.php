@@ -3,20 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-
-class AdminDashController extends Controller
-{
-    <?php
-
-namespace App\Http\Controllers\Api;
-
-use App\Http\Controllers\Controller;
 use App\Models\Hotel;
 use App\Models\Resources;
 use App\Models\RoomApplication;
 use App\Models\User;
 use Illuminate\Http\Request;
+
+
 
 class AdminDashController extends Controller
 {
@@ -28,8 +21,8 @@ class AdminDashController extends Controller
         //
         $users = User::count();
         $books = Resources::where('type', 'Book')->count();
-        $articles = Hotel::where('type', 'Article')->count();
-        $videos = RoomApplication::where('type', 'Video')->count();
+        $articles = Resources::where('type', 'Article')->count();
+        $videos = Resources::where('type', 'Video')->count();
 
         $data = [
             'users' => $users,

@@ -8,7 +8,7 @@
                     <div>
                         <p className="font-semibold text-gray-400">Books</p>
                         <p className="text-2xl font-bold text-gray-700">
-                            {{ store.state.analytics.data.Books }} .
+                            {{ store.state.analytics.data.books }} .
                         </p>
                     </div>
                     <div
@@ -42,7 +42,7 @@
                     <div>
                         <p className="font-semibold text-gray-400">Articles</p>
                         <p className="text-2xl font-bold text-gray-700">
-                            {{ store.state.analytics.data.Articles }}.
+                            {{ store.state.analytics.data.articles }}.
                         </p>
                     </div>
 
@@ -77,7 +77,7 @@
                     <div>
                         <p className="font-semibold text-gray-400">Videos</p>
                         <p className="text-2xl font-bold text-gray-700">
-                            {{ store.state.analytics.data.Videos }}.
+                            {{ store.state.analytics.data.videos }}.
                         </p>
                     </div>
 
